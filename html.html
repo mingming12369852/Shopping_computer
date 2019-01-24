@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    var buy = 0; //實際購買
+    var cup = 0; //獲得杯數
+    var free = 0; //送的杯數
+    var cup_money = 20; //金額
+
+
+
+    function run() {
+
+      var buy_element = document.getElementById('cup');
+      var buy = buy_element.value;
+      var cup_money_element = document.getElementById('money');
+      var cup_money = cup_money_element.value;
+
+      var a = buy;
+      console.log("hi");
+
+      while (buy != 0) {
+        a = a - 5;
+        free++;
+        console.log(free);
+        if (a < 5) {
+          console.log("d");
+          Checkout();
+          break;
+        }
+
+      }
+
+      function Checkout() {
+        cup = free;
+        cup_money = cup_money * buy;
+        // console.log("買了" + buy + "杯" + "," + "送" + cup + "杯" + ",總金額" + cup_money);
+        alert("買了" + buy + "杯" + "," + "送" + cup + "杯" + ",總金額" + cup_money);
+      }
+    }
+
+    function processFormData() {
+
+    }
+  </script>
+</head>
+
+<body>
+  買五送一
+  <form>
+    購買(杯):<br>
+    <input id="cup" type="text" name="firstname">
+    <br>
+    自訂一杯金額:<br>
+    <input id="money" type="text" name="lastname">
+  </form>
+  <button type="button" onclick="run()" name="button">計算點我</button>
+</body>
+
+</html>
