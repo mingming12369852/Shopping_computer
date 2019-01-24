@@ -1,5 +1,6 @@
 # Shopping_computer
 專屬台灣人的 買x送X計算機<br>
+連結：https://mingming12369852.github.io/Shopping_computer/
 
 ```
 為了解決
